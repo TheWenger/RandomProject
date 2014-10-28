@@ -8,6 +8,18 @@
     android:layout_marginRight="8dp"
     card_view:cardCornerRadius="2dp">
 
-    <include layout="@layout/post_base_layout" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/post_base_layout" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:background="@color/material_teal_700"/>
+
+    </LinearLayout>
 
 </android.support.v7.widget.CardView>

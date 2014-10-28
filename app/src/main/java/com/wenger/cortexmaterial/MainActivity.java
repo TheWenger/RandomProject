@@ -2,12 +2,16 @@ package com.wenger.cortexmaterial;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.wenger.cortexmaterial.Adapter.FeedAdapter;
 
-public class MainActivity extends Activity {
+
+public class MainActivity extends ActionBarActivity {
 
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
@@ -17,7 +21,14 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mRecyclerView = (RecyclerView) findViewById(R.id.feed_list);
+        mRecyclerView.setHasFixedSize(true);
 
+        mLayoutManager = new LinearLayoutManager(this);
+        mRecyclerView.setLayoutManager(mLayoutManager);
+
+        mAdapter = new FeedAdapter();
+        mRecyclerView.setAdapter(mAdapter);
 
     }
 
