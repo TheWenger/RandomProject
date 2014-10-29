@@ -8,12 +8,6 @@
     android:layout_marginRight="8dp"
     card_view:cardCornerRadius="2dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <include layout="@layout/post_base_layout" />
-    </LinearLayout>
-
+    <include layout="@layout/post_status"/>
 
 </android.support.v7.widget.CardView>

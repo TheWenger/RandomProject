@@ -8,10 +8,10 @@ import android.view.ViewGroup;
 
 import com.wenger.cortexmaterial.R;
 
-public class FeedAdapter extends RecyclerView.Adapter<FeedAdapter.ViewHolder>{
+public class FeedAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
 
     @Override
-    public FeedAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v;
         if(viewType == 0){
             v = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_status, parent, false);
@@ -35,7 +35,7 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedAdapter.ViewHolder>{
     }
 
     @Override
-    public void onBindViewHolder(FeedAdapter.ViewHolder viewHolder, int i) {
+    public void onBindViewHolder(RecyclerView.ViewHolder viewHolder, int position) {
 
     }
 
